@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
+import {HashRouter, Route, Switch, Redirect} from 'react-router-dom'
 
 import LoginForm from './components/LoginForm'
 import Home from './components/Home'
@@ -69,7 +69,7 @@ class App extends Component {
     const {cartList} = this.state
 
     return (
-      <BrowserRouter>
+      <HashRouter>
         <CartContext.Provider
           value={{
             cartList,
@@ -95,7 +95,7 @@ class App extends Component {
             <Redirect to="not-found" />
           </Switch>
         </CartContext.Provider>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }
